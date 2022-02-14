@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Tip calculator app</title>
+  </head>
+  <body>
+    <div>
+      <h1>SPLI</br>TTER</h1>
+    </div>
+    <div class="main-bottom">
+    <div class="main">
+      <div class="top">
+        <form>
+          <label for="bill">Bill</label><br />
+          <input
+            type="text"
+            id="bill"
+            name="bill"
+            oninput="getBill()"
+          />
+        </form>
+        <p id="selectTipP">Select Tip %</p>
+        <input
+          type="button"
+          id="button-1"
+          class="button"
+          value="4%"
+          onclick="getTip(.05)"
+        />
+        <input
+          type="button"
+          id="button-2"
+          class="button"
+          value="10%"
+          onclick="getTip(.10)"
+        />
+        <input
+          type="button"
+          id="button-3"
+          class="button"
+          value="15%"
+          onclick="getTip(.15)"
+        />
+        <input
+          type="button"
+          id="button-4"
+          class="button"
+          value="25%"
+          onclick="getTip(.25)"
+        />
+        <input
+          type="button"
+          id="button-5"
+          class="button"
+          value="50%"
+          onclick="getTip(.50)"
+        />
+        <input type="button" id="button-6" class="button" value="Custom" onclick="getTip(0)"/>
+        <form>
+          <label for="people">Number of People</label><br />
+          <input type="text" id="people" name="people" oninput="getBill()" />
+        </form>
+      </div>
+      <div class="bottom">
+        <div class="bottom-left">
+          <p id="total1">Tip Amount</p>
+          <p id="total2">
+            / person <em id="tipSplit"></em>
+          </p>
+          <p id="total1">Total</p>
+          <p id="total2">/ person <em id="totalSplit"></em></p>
+        </div>
+        <input type="button" id="button-7" class="button" value="Reset" onclick="getTip(0)"/>
+      </div>
+    </div>
+  
+    <div>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Shivansh Gupta</a>.
+      </div>
+    </div>
+  </div>
+    <script src="script.js"></script>
+  </body>
+</html>
